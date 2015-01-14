@@ -11,6 +11,7 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic/js/angular/angular-resource.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -24,6 +25,9 @@
     <script src="js/list/controller/list.controller.js"></script>
     <script src="js/location/app.js"></script>
     <script src="js/location/controller/location.controller.js"></script>
+    <script src="js/http-service/app.js"></script>
+    <script src="js/http-service/services/example.service.js"></script>
+    <script src="js/http-service/controllers/example.controller.js"></script>
   </head>
   <body ng-app="starter">
     <!--
@@ -35,13 +39,19 @@
          ng-class="{'bar-balanced': !header.headerActive, 'bar-assertive': header.headerActive}"
          ng-click="header.toggle()"
          class="animated">
+      <a class="button" href="tel:+48502438597">Alarmowy!</a>
+
       <h1 class="title">Pierwsza Pomoc!</h1>
+
       <button class="button"
               ng-controller="LocationController as location"
               ng-click="location.showLocation()">Show location</button>
     </ion-header-bar>
 
     <ion-content ng-controller="ListController as list" class="has-header">
+      <div ng-controller="ExampleController as example">
+        <button ng-click="example.getExampleCom()" class="button button-positive">get example.com</button>
+      </div>
       <ion-list class="list">
         <ion-item ng-repeat="item in list.items" class="item">
           <button class="button button-clear button-dark" ng-click="list.selectItem(item)">{{item.name}}</button>

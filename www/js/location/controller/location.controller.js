@@ -20,12 +20,15 @@ angular.module('starter.location').controller('LocationController', function ($w
       that.error = "Nie ma geolocation";
       that.modal.show();
     } else {
-      $window.navigator.geolocation.getCurrentPosition(onSuccess, onError);
+      $window.navigator.geolocation.getCurrentPosition(onSuccess, onError, {
+        enableHighAccuracy: true
+      });
     }
   }
 
   function onSuccess(position) {
     that.position = position;
+    console.log(position);
     that.modal.show();
   }
 
