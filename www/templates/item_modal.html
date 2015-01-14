@@ -1,14 +1,13 @@
-<div class="row">
-    <ion-modal-view class="col col-67 col-offset-33">
-        <ion-header-bar ng-click="list.hideItem()">
-            <h1 class="title">{{list.currentItem.name}}</h1>
-            <button class="button icon-right button-clear button-assertive">
-                <i class="icon ion-close-round"></i>
-            </button>
-        </ion-header-bar>
-        <ion-content>
-            <img class="item-img" ng-src="{{list.currentItem.img}}">
-            <span>{{list.currentItem.description}}</span>
-        </ion-content>
-    </ion-modal-view>
-</div>
+
+<ion-modal-view>
+    <ion-header-bar ng-click="list.hideItem()">
+        <h1 class="title">{{list.currentItem.name}}</h1>
+        <button class="button icon-right button-clear button-assertive">
+            <i class="icon ion-close-round"></i>
+        </button>
+    </ion-header-bar>
+    <!--<ion-content>-->
+        <img class="item-img" ng-src="{{list.currentItem.img}}">
+        <span>{{list.currentItem.description}}</span>
+    <!--</ion-content>-->
+</ion-modal-view>

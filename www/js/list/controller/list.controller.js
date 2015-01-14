@@ -42,7 +42,7 @@ angular.module('starter.list').controller('ListController', function ($scope, $i
       {
         name: 'pies',
         description: 'pies je śmieci',
-        img: 'http://t3.gstatic.com/images?q=tbn:ANd9GcSMp3Zb-s_O38HlY4x9xPI0k0cJ8_DtEH4zJ4mKCt_4sGapVOOYrw'
+        img: 'http://images2.fanpop.com/image/photos/13900000/Pretty-Dog-wallpaper-dogs-13905794-1024-768.jpg'
       },
       {name: 'kot', description: 'kot śmierdzi', img: 'http://kooteczki.blog.pl/files/2014/07/Kot-Syberyjski2.jpg'},
       {
@@ -58,7 +58,7 @@ angular.module('starter.list').controller('ListController', function ($scope, $i
       {
         name: 'pies',
         description: 'pies je śmieci',
-        img: 'http://t3.gstatic.com/images?q=tbn:ANd9GcSMp3Zb-s_O38HlY4x9xPI0k0cJ8_DtEH4zJ4mKCt_4sGapVOOYrw'
+        img: 'http://images2.fanpop.com/image/photos/13900000/Pretty-Dog-wallpaper-dogs-13905794-1024-768.jpg'
       },
       {name: 'kot', description: 'kot śmierdzi', img: 'http://kooteczki.blog.pl/files/2014/07/Kot-Syberyjski2.jpg'}
     ];

@@ -22,6 +22,8 @@
     <script src="js/header/controllers/header.controller.js"></script>
     <script src="js/list/app.js"></script>
     <script src="js/list/controller/list.controller.js"></script>
+    <script src="js/location/app.js"></script>
+    <script src="js/location/controller/location.controller.js"></script>
   </head>
   <body ng-app="starter">
     <!--
@@ -34,6 +36,9 @@
          ng-click="header.toggle()"
          class="animated">
       <h1 class="title">Pierwsza Pomoc!</h1>
+      <button class="button"
+              ng-controller="LocationController as location"
+              ng-click="location.showLocation()">Show location</button>
     </ion-header-bar>
 
     <ion-content ng-controller="ListController as list" class="has-header">
