@@ -19,7 +19,11 @@ angular.module('starter.list').controller('ListController', function ($scope, $i
   function selectItem(item) {
     that.currentItem = item;
     if (that.modal) {
-      that.modal.show();
+      that.modal.show().then(function () {
+        //Big hack!
+        //To pewnie powinno być zrobione inaczej.
+        angular.element('.item-img img').css('height', angular.element('#item-modal').height()*0.8);
+      });
     }
   }
 
@@ -29,6 +33,11 @@ angular.module('starter.list').controller('ListController', function ($scope, $i
 
   function createList() {
     return [
+      {
+        name: 'long cat',
+        description: 'long cat is looong',
+        img: 'https://ipost.files.wordpress.com/2012/05/long_cat1_2.gif'
+      },
       {
         name: 'allahu akbar!',
         description: 'some description text',

@@ -1,5 +1,5 @@
 
-<ion-modal-view>
+<ion-modal-view id="item-modal">
     <ion-header-bar ng-click="list.hideItem()">
         <h1 class="title">{{list.currentItem.name}}</h1>
         <button class="button icon-right button-clear button-assertive">
@@ -8,7 +8,9 @@
     </ion-header-bar>
     <!--<ion-content>-->
     <div class="content has-header">
-        <img class="item-img" ng-src="{{list.currentItem.img}}">
+        <div class="item-img">
+            <img ng-src="{{list.currentItem.img}}">
+        </div>
         <span>{{list.currentItem.description}}</span>
     </div>
     <!--</ion-content>-->
