@@ -20,7 +20,7 @@ angular.module('starter.translation').factory('LocaleService', function ($window
     if ($window.navigator.globalization) {
       $window.navigator.globalization.getPreferredLanguage(
         function (language) {
-          deferred.resolve(JSON.stringify(language));
+          deferred.resolve(language.value);
         },
         function (error) {
           deferred.reject(error);
