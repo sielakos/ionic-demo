@@ -23,7 +23,12 @@ angular.module('starter.list').controller('ListController', function ($scope, $i
       that.modal.show().then(function () {
         //Big hack!
         //To pewnie powinno być zrobione inaczej.
-        angular.element('.item-img img').css('height', angular.element('#item-modal').height()*0.8);
+        //Lub przynajmniej w dyrektywie, ale mi się nie chce!
+        var maxHeight = angular.element('#item-modal').height()*0.8;
+        var height = angular.element('.item-img img').height();
+        if (height > maxHeight) {
+          angular.element('.item-img img').height(maxHeight);
+        }
       });
     }
   }
