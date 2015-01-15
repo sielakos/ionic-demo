@@ -4,6 +4,7 @@ angular.module('starter.list').controller('ListController', function ($scope, $i
   this.items = createList();
   this.selectItem = selectItem;
   this.hideItem = hideItem;
+  this.isArray = angular.isArray
 
   $ionicModal.fromTemplateUrl('templates/item_modal.html', {
     scope: $scope,
@@ -33,6 +34,18 @@ angular.module('starter.list').controller('ListController', function ($scope, $i
 
   function createList() {
     return [
+      {
+        name: 'lista obrazków',
+        description: 'long cat is looong',
+        img: [
+          'http://www.changethethought.com/wp-content/tumblr_lad3eouzez1qzt4vjo1_500.gif',
+          'https://ipost.files.wordpress.com/2012/05/long_cat1_2.gif',
+          'http://www.paklatest.com/wp-content/uploads/2014/12/allahuakbar.jpeg',
+          'http://pressmix.eu/wp-content/uploads/2013/12/Krowa-na-pastwisku.jpg',
+          'http://images2.fanpop.com/image/photos/13900000/Pretty-Dog-wallpaper-dogs-13905794-1024-768.jpg',
+          'http://kooteczki.blog.pl/files/2014/07/Kot-Syberyjski2.jpg'
+        ]
+      },
       {
         name: 'long cat',
         description: 'long cat is looong',

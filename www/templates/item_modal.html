@@ -8,8 +8,17 @@
     </ion-header-bar>
     <!--<ion-content>-->
     <div class="content has-header">
-        <div class="item-img">
+        <div class="item-img" ng-if="!list.isArray(list.currentItem.img)">
             <img ng-src="{{list.currentItem.img}}">
+        </div>
+        <div ng-if="list.isArray(list.currentItem.img)">
+            <ion-slide-box>
+                <ion-slide ng-repeat="img in list.currentItem.img">
+                    <div class="item-img">
+                        <img ng-src="{{img}}">
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
         </div>
         <span>{{list.currentItem.description}}</span>
     </div>

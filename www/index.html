@@ -9,9 +9,10 @@
     <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
 
-    <!-- ionic/angularjs js -->
+    <!-- libs -->
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/angular-translate/angular-translate.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -52,29 +53,18 @@
               ng-click="location.showLocation()">Show location</button>
     </ion-header-bar>
     <ion-content ng-controller="ListController as list" class="has-header">
-      <ion-slide-box>
-        <ion-slide>
-          <div ng-controller="ExampleController as example">
-            <button ng-click="example.getExampleCom()" class="button button-positive">get example.com</button>
-          </div>
-          <div ng-controller="CustomActivityController as activity">
-            <button ng-click="activity.runCustomActivity()" class="button button-energized">custom activity</button>
-          </div>
+      <div ng-controller="ExampleController as example">
+        <button ng-click="example.getExampleCom()" class="button button-positive">get example.com</button>
+      </div>
+      <div ng-controller="CustomActivityController as activity">
+        <button ng-click="activity.runCustomActivity()" class="button button-energized">custom activity</button>
+      </div>
 
-          <ion-list class="list">
-            <ion-item ng-repeat="item in list.items" class="item">
-              <button class="button button-clear button-dark" ng-click="list.selectItem(item)">{{item.name}}</button>
-            </ion-item>
-          </ion-list>
-        </ion-slide>
-        <ion-slide>
-          <div style="width: 100%; min-height: 600px">
-            bla bla bla
-          </div>
-        </ion-slide>
-      </ion-slide-box>
+      <ion-list class="list">
+        <ion-item ng-repeat="item in list.items" class="item">
+          <button class="button button-clear button-dark" ng-click="list.selectItem(item)">{{item.name}}</button>
+        </ion-item>
+      </ion-list>
     </ion-content>
-
-
   </body>
 </html>
