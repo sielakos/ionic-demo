@@ -5,7 +5,7 @@ http://docs.telerik.com/platform/appbuilder/creating-your-project/using-plugins/
 -->
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
         id="com.example.CustomActivityPlugin"
-        version="0.1.0">
+        version="0.1.1">
     <name>CustomActivity</name>
     <keywords>custom,activity, plugin</keywords>
     <description>

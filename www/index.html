@@ -15,12 +15,15 @@
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
-    <script src="custom_activity.js"></script>
+
+    <!-- test plugin -->
+    <script src="js/custom_activity.js"></script>
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/starter.run.js"></script>
     <script src="js/header/app.js"></script>
+    <script src="js/controllers/CustomActivity.controller.js"></script>
     <script src="js/header/controllers/header.controller.js"></script>
     <script src="js/list/app.js"></script>
     <script src="js/list/controller/list.controller.js"></script>
@@ -53,19 +56,14 @@
       <div ng-controller="ExampleController as example">
         <button ng-click="example.getExampleCom()" class="button button-positive">get example.com</button>
       </div>
+      <div ng-controller="CustomActivityController as activity">
+        <button ng-click="activity.runCustomActivity()" class="button button-energized">custom activity</button>
+      </div>
       <ion-list class="list">
         <ion-item ng-repeat="item in list.items" class="item">
           <button class="button button-clear button-dark" ng-click="list.selectItem(item)">{{item.name}}</button>
         </ion-item>
       </ion-list>
     </ion-content>
-
-    <script type="application/javascript">
-      if (window.D102) {
-        alert("D102:" + D102);
-      } else {
-        alert("No D102");
-      }
-    </script>
   </body>
 </html>
