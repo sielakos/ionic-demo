@@ -13,6 +13,7 @@
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="lib/angular-translate/angular-translate.js"></script>
+    <script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -33,25 +34,26 @@
     <script src="js/http-service/app.js"></script>
     <script src="js/http-service/services/example.service.js"></script>
     <script src="js/http-service/controllers/example.controller.js"></script>
+    <script src="js/translation/app.js"></script>
+    <script src="js/translation/controllers/locale.controller.js"></script>
+    <script src="js/translation/services/locale.service.js"></script>
   </head>
   <body ng-app="starter">
-    <!--
-      The views will be rendered in the <ion-nav-view> directive below
-      Templates are in the /templates folder (but you could also
-      have templates inline in this html file if you'd like).
-    -->
+
     <ion-header-bar ng-controller="HeaderController as header"
          ng-class="{'bar-balanced': !header.headerActive, 'bar-assertive': header.headerActive}"
          ng-click="header.toggle()"
          class="animated">
-      <a class="button" href="tel:+48502438597">Alarmowy!</a>
+      <a class="button" href="tel:+48502438597" translate>EMERGENCY_CALL</a>
 
-      <h1 class="title">Pierwsza Pomoc!</h1>
+      <h1 class="title" translate>APP_NAME</h1>
 
       <button class="button"
               ng-controller="LocationController as location"
-              ng-click="location.showLocation()">Show location</button>
+              ng-click="location.showLocation()"
+              translate>SHOW_LOCATION</button>
     </ion-header-bar>
+
     <ion-content ng-controller="ListController as list" class="has-header">
       <div ng-controller="ExampleController as example">
         <button ng-click="example.getExampleCom()" class="button button-positive">get example.com</button>
@@ -59,7 +61,9 @@
       <div ng-controller="CustomActivityController as activity">
         <button ng-click="activity.runCustomActivity()" class="button button-energized">custom activity</button>
       </div>
-
+      <div ng-controller="LocaleController as locale">
+        <button ng-click="locale.getDefaultLocale()" class="button button-energized">default locale</button>
+      </div>
       <ion-list class="list">
         <ion-item ng-repeat="item in list.items" class="item">
           <button class="button button-clear button-dark" ng-click="list.selectItem(item)">{{item.name}}</button>

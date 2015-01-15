@@ -1,4 +1,6 @@
-angular.module('starter').run(function ($ionicPlatform) {
+angular.module('starter').run(function ($ionicPlatform, LocaleService) {
+    LocaleService.useDefaultLocale();
+
     $ionicPlatform.ready(function () {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
