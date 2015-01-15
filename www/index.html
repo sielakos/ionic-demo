@@ -63,6 +63,8 @@
       </div>
       <div ng-controller="LocaleController as locale">
         <button ng-click="locale.getDefaultLocale()" class="button button-energized">default locale</button>
+        <button ng-click="locale.setUS()" class="button button-energized">en-US</button>
+        <button ng-click="locale.setPL()" class="button button-energized">pl-PL</button>
       </div>
       <ion-list class="list">
         <ion-item ng-repeat="item in list.items" class="item">
