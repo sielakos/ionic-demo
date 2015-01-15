@@ -4,7 +4,7 @@ angular.module('starter.translation').controller('LocaleController', function ($
     if (!window.navigator.globalization) {
       alert("no globalization!");
     } else {
-      $window.navigator.globalization.getPreferredLanguage(
+      $window.navigator.globalization.getLocaleName(
         function (language) {alert('language: ' + JSON.stringify(language) + '\n');},
         function () {alert('Error getting language\n');}
       );
