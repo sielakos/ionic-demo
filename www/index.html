@@ -15,6 +15,7 @@
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
+    <script src="custom_activity.js"></script>
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
@@ -58,5 +59,13 @@
         </ion-item>
       </ion-list>
     </ion-content>
+
+    <script type="application/javascript">
+      if (window.D102) {
+        alert("D102:" + D102);
+      } else {
+        alert("No D102");
+      }
+    </script>
   </body>
 </html>

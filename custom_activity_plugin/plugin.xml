@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Docs:
+http://docs.telerik.com/platform/appbuilder/creating-your-project/using-plugins/using-custom-plugins/making-plugman-compatible/create-modify-plugin-xml
+-->
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+        id="com.example.CustomActivityPlugin"
+        version="0.1.0">
+    <name>CustomActivity</name>
+    <keywords>custom,activity, plugin</keywords>
+    <description>
+        Nie wiem czy to jest potrzebne, więc niech będzie.
+    </description>
+
+    <js-module src="www/custom_activity.js" name="Glass">
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/widget">
+            <feature name="CustomActivity">
+                <param name="android-package" value="com.example.CustomActivityPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity
+                    android:name="com.example.CustomActivity"
+                    android:label="Custom Activity" >
+            </activity>
+        </config-file>
+
+        <source-file src="res/layout/custom_activity.xml"
+                     target-dir="res/layout" />
+
+        <source-file src="src/com/example/CustomActivity.java"
+                     target-dir="src/com/example" />
+
+        <source-file src="src/com/example/CustomActivityPlugin.java"
+                     target-dir="src/com/example" />
+    </platform>
+</plugin>
