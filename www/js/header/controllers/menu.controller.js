@@ -14,7 +14,8 @@ angular.module('starter.header').controller('MenuController', function ($scope, 
 
   function activate() {
     $ionicPopover.fromTemplateUrl('templates/menu.html', {
-      $scope: $scope
+      $scope: $scope,
+      animation: 'slide-in-up'
     }).then(function (popover) {
       menu = popover;
     });
