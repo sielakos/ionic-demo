@@ -3,7 +3,9 @@ angular.module('starter.phone-call').controller('CallController', function ($win
     if (!$window.ionic.Platform.isIOS()) {
       $window.document.location.href = 'tel:' + phoneNumber;
     } else {
-      $window.phoneDialer.dial(phoneNumber);
+      console.log("IOS call: " + phoneNumber);
+      $window.document.location.href = 'telprompt://' + phoneNumber;
+      //$window.phoneDialer.dial(phoneNumber);
     }
   };
 });
