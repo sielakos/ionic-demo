@@ -2,6 +2,7 @@ angular.module('starter.location').controller('LocationController', function ($w
   var that = this;
 
   this.showLocation = showLocation;
+  this.hideLocation = hideLocation;
 
   $ionicModal.fromTemplateUrl('templates/location_modal.html', {
     scope: $scope,
@@ -36,6 +37,10 @@ angular.module('starter.location').controller('LocationController', function ($w
     that.position = null;
     that.error = error;
     that.modal.show();
+  }
+
+  function hideLocation() {
+    that.modal.hide();
   }
 
 });

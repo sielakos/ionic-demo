@@ -1,6 +1,9 @@
 <ion-modal-view>
-    <ion-header-bar>
+    <ion-header-bar ng-click="location.hideLocation()">
         <h1 class="title">Twoja obecna lokalizacja</h1>
+        <button class="button icon-right button-clear button-assertive">
+            <i class="icon ion-close-round"></i>
+        </button>
     </ion-header-bar>
     <ion-content>
         <div ng-if="location.position">

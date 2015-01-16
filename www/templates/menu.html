@@ -1,0 +1,26 @@
+<ion-popover-view>
+    <ion-header-bar>
+        <h1 class="title" translate>MENU</h1>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <ion-list ng-controller="LocaleController as locale">
+            <ion-item
+                    ng-controller="LocationController as location"
+                    ng-click="location.showLocation()"
+                    translate>SHOW_LOCATION
+            </ion-item>
+            <ion-item
+                    ng-controller="ExampleController as example"
+                    ng-click="example.getExampleCom()">get example.com
+            </ion-item>
+            <ion-item
+                    ng-controller="CustomActivityController as activity"
+                    ng-click="activity.runCustomActivity()">custom activity
+            </ion-item>
+            <ion-item ng-click="locale.getDefaultLocale()">default locale</ion-item>
+            <ion-item ng-click="locale.setUS()">en-US</ion-item>
+            <ion-item ng-click="locale.setPL()">pl-PL</ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-popover-view>
