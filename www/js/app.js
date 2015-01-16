@@ -6,4 +6,4 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.header', 'starter.list', 'starter.location',
-  'starter.http-service', 'starter.translation', 'pascalprecht.translate']);
+  'starter.http-service', 'starter.translation', 'pascalprecht.translate', 'starter.phone-call']);
